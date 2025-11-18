@@ -1,0 +1,118 @@
+body,
+body.works_on_smartphone {
+  display: flex;
+  flex-direction: column; /* header, main, footer stacked vertically */
+  min-height: 100vh;      /* ensure footer can be pushed to bottom if needed */
+  margin: 0;
+  padding: 0;
+}
+header{
+    background-color: aliceblue;
+    display: block;
+}
+
+header ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #d2d2eb;
+}
+
+header li {
+    float: right;
+    padding: 10px;
+}
+
+header li:hover{
+    background-color: #a6ace0;
+}
+
+header a {
+    display: block;
+    color: black;
+    font-weight: 600;
+    text-align: center;
+    text-decoration: none;
+    font-family: 'popins', sans-serif;
+    cursor: pointer;
+}
+
+
+
+main {
+  display: flex;
+  flex-direction: row; /* article | aside side-by-side */
+  flex: auto;          /* allow main to grow/shrink automatically */
+  gap: 20px;           /* small gap between article and aside */
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+
+article {
+  flex: 2;
+  padding: 20px;
+  background-color: #ffffff;
+  box-sizing: border-box;
+  overflow-y: auto; 
+  min-height: 0;    
+}
+
+article p a
+{
+    text-decoration: none;
+    color: blue;
+    font-size: 25px;
+    font-family: 500;
+    background-color: #d2d2eb;
+    padding: 18px;
+    border-radius: 15px;
+    font-family: 'popins', sans-serif;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+aside {
+  flex: 1;
+  padding: 20px;
+  background-color: #f2f2f2;
+  box-sizing: border-box;
+  overflow-y: auto; 
+  min-height: 0;    
+}
+
+
+header {
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+footer {
+  padding: 10px 20px;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  body.works_on_smartphone main {
+    flex-direction: column; /* stack article on top of aside on small screens */
+  }
+
+  
+  body.works_on_smartphone article,
+  body.works_on_smartphone aside {
+    flex: none;
+    width: 100%;
+  }
+}
+
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
