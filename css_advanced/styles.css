@@ -1,0 +1,317 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+}
+
+/* HEADER NAVBAR */
+header {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 20px 60px;
+    z-index: 10;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav img {
+    width: 120px;
+}
+
+/* HERO SECTION */
+main section:first-of-type {
+    height: 100vh;
+    width: 100%;
+    background-image:
+        linear-gradient(to bottom, rgba(0,0,0,0) 30%, rgba(0,0,30,0.9)),
+        url("images/Object.png");  /* <-- replace with your file */
+    background-size: cover;
+    background-position: top center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-top: 120px;
+}
+
+/* BIG TITLE */
+main section:first-of-type h1 {
+    font-size: 70px;
+    font-weight: 800;
+    margin-bottom: 20px;
+}
+
+/* SMILES - GRIN - LAUGH */
+main section:first-of-type span {
+    margin: 0 10px;
+    font-size: 18px;
+    font-weight: bold;
+    opacity: 0.8;
+}
+
+/* BUTTON */
+main section:first-of-type button {
+    margin-top: 30px;
+    padding: 12px 32px;
+    border-radius: 25px;
+    border: none;
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    background: #C268D7;
+    cursor: pointer;
+}
+
+/* LEARN FROM THE PROS */
+main section:first-of-type h2 {
+    margin-top: 80px;
+    font-size: 26px;
+    color: #B987FF;
+}
+
+/* PROFILES CONTAINER */
+main section:first-of-type > div:nth-of-type(2) > div {
+    display: flex;
+    gap: 40px;
+    margin-top: 40px;
+}
+
+/* EACH PROFILE */
+main section:first-of-type > div:nth-of-type(2) > div > div {
+    text-align: center;
+}
+
+main section:first-of-type img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+}
+
+
+/* === TESTIMONIAL SECTION === */
+.testimonial-section {
+    background-color: #C271FF; /* purple background */
+    padding: 80px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.testimonial-container {
+    width: 70%;
+    display: flex;
+    align-items: center;
+    gap: 60px;
+}
+
+.testimonial-container img {
+    width: 220px;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.testimonial-text {
+    color: white;
+    max-width: 70%;
+    font-size: 22px;
+    line-height: 1.5;
+}
+
+.testimonial-text h3 {
+    margin-top: 25px;
+    font-weight: bold;
+    font-size: 22px;
+}
+
+.testimonial-text p {
+    margin-top: 5px;
+    font-size: 18px;
+    opacity: 0.9;
+}
+
+/* === POPULAR TUTORIALS: h2 at top, then 4 cards in a row === */
+
+.popular-tutorials {
+  /* create the grid: h2 + 4 cards all children of this grid */
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 equal columns on wide screens */
+  gap: 24px;
+  padding: 60px 40px;
+  align-items: start;
+  background: #F9F9F9;
+  color: #111;
+}
+
+/* Make the H2 span the full row and center it */
+.popular-tutorials > h2 {
+  grid-column: 1 / -1;   /* span all columns */
+  text-align: center;
+  margin: 0 0 18px;
+  font-size: 32px;
+  color: #C271FF;
+}
+
+/* Each direct child div becomes a card */
+.popular-tutorials > div {
+  background: #fff;
+  padding: 18px;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  text-align: left;
+}
+
+/* Card image (first image in each card) */
+.popular-tutorials > div > img:first-of-type {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+/* Card title + description */
+.popular-tutorials > div h3 { font-size: 18px; margin: 0; color: #111; }
+.popular-tutorials > div p { color: #555; margin: 0; }
+
+/* Author row (avatar + name) — your HTML has this as the next div */
+.popular-tutorials > div > div:first-of-type {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 6px;
+}
+.popular-tutorials > div > div:first-of-type img {
+  width: 40px; height: 40px; border-radius: 50%; object-fit: cover;
+}
+.popular-tutorials > div > div:first-of-type h4 { margin: 0; font-size: 14px; }
+
+/* Stars container (second inner div) — ensure stars are horizontal */
+.popular-tutorials > div > div:nth-of-type(2) {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+  color: #C271FF;
+}
+
+/* Duration (last <p>) */
+.popular-tutorials > div p:last-of-type {
+  margin-top: auto; /* push duration to bottom if card grows */
+  font-weight: 700;
+}
+
+/* ===== Responsive: collapse columns on smaller screens ===== */
+@media (max-width: 1100px) {
+  .popular-tutorials { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 700px) {
+  .popular-tutorials { grid-template-columns: 1fr; padding: 40px 18px; }
+  .popular-tutorials > h2 { font-size: 26px; margin-bottom: 16px; }
+}
+
+
+
+
+
+
+/* === FOOTER SECTION: h2 at top, then 4 cards in a row (like popular-tutorials) === */
+
+.footersection {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 columns on wide screens */
+  gap: 26px;
+  padding: 60px 40px;
+  align-items: start;
+  background:#071629;   /* change as needed */
+  color: #111;
+}
+
+/* Make the H2 span the full row and center it */
+.footersection > h2 {
+  grid-column: 1 / -1;   /* span all columns */
+  text-align: center;
+  margin: 0 0 18px;
+  font-size: 28px;
+  color: #C271FF;
+}
+
+/* Each direct child div becomes a card */
+.footersection > div {
+  background:#071629;
+  padding: 18px;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  text-align: center;
+  align-items: center;
+}
+
+/* Card image (first image in each card) */
+.footersection > div > img {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  border-radius: 12px;
+  margin-bottom: 8px;
+}
+
+/* Card title + paragraph */
+.footersection > div h3 { font-size: 18px; margin: 6px 0 4px; color: #111; }
+.footersection > div p { color: #666; margin: 0; font-size: 14px; }
+
+/* Button below the cards: full width row, centered */
+.footersection > button {
+  grid-column: 1 / -1;   /* place the button across full width under the 4 cards */
+  justify-self: center;  /* center horizontally */
+  margin-top: 18px;
+  padding: 12px 28px;
+  border-radius: 24px;
+  border: none;
+  background: #C268D7;
+  color: white;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+/* Responsive: 2 columns on medium, 1 column on small */
+@media (max-width: 1100px) {
+  .footersection { grid-template-columns: repeat(2, 1fr); padding: 40px 30px; }
+}
+
+@media (max-width: 700px) {
+  .footersection { grid-template-columns: 1fr; padding: 30px 18px; }
+  .footersection > h2 { font-size: 22px; margin-bottom: 14px; }
+  .footersection > div { text-align: left; align-items: flex-start; }
+  .footersection > div img { width: 64px; height: 64px; }
+  .footersection > button { justify-self: stretch; }
+}
