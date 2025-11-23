@@ -251,7 +251,7 @@ main section:first-of-type img {
   padding: 60px 40px;
   align-items: start;
   background:#071629;   /* change as needed */
-  color: #111;
+  color: white;
 }
 
 /* Make the H2 span the full row and center it */
@@ -286,8 +286,8 @@ main section:first-of-type img {
 }
 
 /* Card title + paragraph */
-.footersection > div h3 { font-size: 18px; margin: 6px 0 4px; color: #111; }
-.footersection > div p { color: #666; margin: 0; font-size: 14px; }
+.footersection > div h3 { font-size: 18px; margin: 6px 0 4px; color:white; }
+.footersection > div p { color:white; margin: 0; font-size: 14px; }
 
 /* Button below the cards: full width row, centered */
 .footersection > button {
@@ -314,4 +314,68 @@ main section:first-of-type img {
   .footersection > div { text-align: left; align-items: flex-start; }
   .footersection > div img { width: 64px; height: 64px; }
   .footersection > button { justify-self: stretch; }
+}
+
+
+
+/* === FAQ SECTION === */
+.faq-section {
+  background: #ffffff;          /* white background */
+  padding: 60px 40px;
+  display: grid;
+  grid-template-columns: 1fr;   /* h2 spans full width */
+  gap: 40px;
+  color: #111;
+}
+
+/* Center the section title */
+.faq-section > h2 {
+  text-align: center;
+  font-size: 32px;
+  color: #080808;
+  margin: 0;
+}
+
+/* The wrapper containing the 2 columns */
+.faq-section > div {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);   /* 2 FAQ columns */
+  gap: 40px;
+}
+
+/* Each column stacks its Q&A blocks */
+.faq-section > div > div {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+/* Question header */
+.faq-section h3 {
+  font-size: 20px;
+  margin: 0 0 6px;
+  color: #111;
+}
+
+/* Answer text */
+.faq-section > div > div > div:nth-child(even) {
+  color: #555;
+  line-height: 1.6;
+  font-size: 15px;
+}
+
+/* Responsive collapse */
+@media (max-width: 900px) {
+  .faq-section > div {
+    grid-template-columns: 1fr; /* single column on tablets/phones */
+  }
+}
+
+@media (max-width: 600px) {
+  .faq-section {
+    padding: 40px 20px;
+  }
+  .faq-section > h2 {
+    font-size: 26px;
+  }
 }
