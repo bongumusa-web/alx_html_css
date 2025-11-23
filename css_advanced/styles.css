@@ -244,7 +244,7 @@ main section:first-of-type img {
 
 /* === FOOTER SECTION: h2 at top, then 4 cards in a row (like popular-tutorials) === */
 
-.footersection {
+.membership-section {
   display: grid;
   grid-template-columns: repeat(4, 1fr); /* 4 columns on wide screens */
   gap: 26px;
@@ -255,7 +255,7 @@ main section:first-of-type img {
 }
 
 /* Make the H2 span the full row and center it */
-.footersection > h2 {
+.membership-section > h2 {
   grid-column: 1 / -1;   /* span all columns */
   text-align: center;
   margin: 0 0 18px;
@@ -264,7 +264,7 @@ main section:first-of-type img {
 }
 
 /* Each direct child div becomes a card */
-.footersection > div {
+.membership-section > div {
   background:#071629;
   padding: 18px;
   border-radius: 12px;
@@ -277,7 +277,7 @@ main section:first-of-type img {
 }
 
 /* Card image (first image in each card) */
-.footersection > div > img {
+.membership-section > div > img {
   width: 80px;
   height: 80px;
   object-fit: contain;
@@ -286,11 +286,11 @@ main section:first-of-type img {
 }
 
 /* Card title + paragraph */
-.footersection > div h3 { font-size: 18px; margin: 6px 0 4px; color:white; }
-.footersection > div p { color:white; margin: 0; font-size: 14px; }
+.membership-section > div h3 { font-size: 18px; margin: 6px 0 4px; color:white; }
+.membership-section > div p { color:white; margin: 0; font-size: 14px; }
 
 /* Button below the cards: full width row, centered */
-.footersection > button {
+.membership-section > button {
   grid-column: 1 / -1;   /* place the button across full width under the 4 cards */
   justify-self: center;  /* center horizontally */
   margin-top: 18px;
@@ -305,15 +305,15 @@ main section:first-of-type img {
 
 /* Responsive: 2 columns on medium, 1 column on small */
 @media (max-width: 1100px) {
-  .footersection { grid-template-columns: repeat(2, 1fr); padding: 40px 30px; }
+  .membership-section { grid-template-columns: repeat(2, 1fr); padding: 40px 30px; }
 }
 
 @media (max-width: 700px) {
-  .footersection { grid-template-columns: 1fr; padding: 30px 18px; }
-  .footersection > h2 { font-size: 22px; margin-bottom: 14px; }
-  .footersection > div { text-align: left; align-items: flex-start; }
-  .footersection > div img { width: 64px; height: 64px; }
-  .footersection > button { justify-self: stretch; }
+  .membership-section { grid-template-columns: 1fr; padding: 30px 18px; }
+  .membership-section > h2 { font-size: 22px; margin-bottom: 14px; }
+  .membership-section > div { text-align: left; align-items: flex-start; }
+  .membership-section > div img { width: 64px; height: 64px; }
+  .membership-section > button { justify-self: stretch; }
 }
 
 
