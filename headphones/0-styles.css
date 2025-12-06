@@ -1,0 +1,268 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header{
+    background-color: #414040;
+    padding: 20px;
+    
+    margin: 0 auto;
+    height: 100vh;
+
+    background-image: url("images/headphones\ listening\ to\ music.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+
+li{
+    list-style: none;
+    
+}
+
+a{
+    text-decoration: none;
+    color: white;
+    font-family: Arial, sans-serif;
+    margin: 0 15px;
+}
+
+.navbar{
+    min-width: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 24px;
+  
+}
+
+.nav-menu{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 60px;
+}
+
+.nav-item a:hover,
+.nav-item a:active {
+    color: #FF6565;
+}
+
+
+.log{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+   
+}
+
+.log span  {
+    font-weight: bold;
+    color: white;
+    font-family: Arial, sans-serif;
+    vertical-align: middle;
+}
+.log img{
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+    vertical-align: middle;
+
+}
+
+.hamburger{
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+    display: none;
+    float: right;
+}
+
+.bar{
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: rgb(247, 240, 240);
+}
+
+
+.header-hero-section{
+    color: white;
+    margin-top: 280px;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.header-hero-section h1 ,h5{
+    padding: 20px;
+    
+}
+
+.header-hero-section button{
+    margin: auto;
+    padding: 15px;
+    border: none;
+    border-radius: 25px;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: bold;
+    font-size: 14px;
+    background-color: #FF6565;
+    color: white;
+}
+
+.header-hero-section button:hover,
+.header-hero-section button:active {
+    opacity: 0.9;
+    transition: opacity 0.3s ease;
+}
+
+.header-hero-section p{
+ 
+   padding: 50px 300px;
+}
+
+
+@media (max-width:780px) {
+    header{
+        padding: 10px;
+    }
+    .nav-menu{
+        gap: 20px;
+    }
+    
+    .header-hero-section{
+    
+          margin-top: 220px;
+   
+    }
+
+
+
+    .header-hero-section p{
+    width: 100%;
+    padding: 60px 20px;
+    overflow: hidden;
+    }
+
+    .header-hero-section h1, h5{
+        padding: 5px;
+    }
+
+    .header-hero-section button{
+        margin-top: 40px;
+        margin-bottom: 20px;
+
+    }
+    
+}
+
+
+
+
+@media (max-width: 480px){
+
+    /* Default */
+.header-hero-section {
+    color: white;
+    margin-top: 200px;
+    transition: margin-top 0.3s ease;
+}
+
+/* When hamburger menu is active */
+.menu-open .header-hero-section {
+    margin-top: 280px; /* adjust as needed */
+}
+
+.header-hero-section h1 ,h5{
+    margin: 8px;
+    padding: 8px;
+}
+
+.header-hero-section button {
+    margin: 8px;
+    padding: 10px;
+    font-size: 10px;
+}
+
+.header-hero-section p{
+    width: 100%;
+    padding: 40px 20px;
+    overflow: hidden;
+}
+header{
+    height: 800px;
+}
+
+    .navbar {
+    justify-content: flex-start;
+          }
+
+    .nav-menu{
+        position: fixed;
+        left: -100%;
+        top: 70px;
+        gap:0;
+        flex-direction: column;
+        background: transparent lightgrey;
+    }
+
+     .nav-item{
+        margin: 20px 0;
+
+    }
+    .log{
+        position: absolute;
+        left: 40%;
+        transform: translateX(-50%);
+    }
+
+    .nav-menu.active{
+        left: 0;
+        width: 100%;
+        margin-bottom: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: left 0.3s ease-in-out;
+    }
+
+    .nav-menu.active .log {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    }
+
+
+
+    .hamburger{
+        display: block;
+        margin-right: auto;
+    }
+
+    .hamburger.active .bar:nth-child(2){
+        opacity: 0;
+    }
+
+    .hamburger.active .bar:nth-child(1){
+        transform: translateY(8px) rotate(45deg);
+    }
+
+
+    .hamburger.active .bar:nth-child(3){
+        transform: translateY(-8px) rotate(-45deg);
+    }
+}
+
+/*button*/
+
+
+/*hero section */ 
+
