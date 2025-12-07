@@ -123,9 +123,5 @@ Built as part of ALX HTML & CSS program
 License
 This project is for educational purposes only.
 
-pgsql
-Copy code
 
-This README covers all the key points, structure, interactions, and workflow you mentioned.  
 
-If you want, I can also make a **short visual diagram** showing how all sections (`0-index` →
