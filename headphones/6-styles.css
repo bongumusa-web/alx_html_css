@@ -2,11 +2,15 @@
    RESULTS SECTION STYLES
    ======================= */
 .results-section {
-  background: url("images/Illustration.jpg") center/cover no-repeat;
-  padding: 100px 0;
-  color: #ffffff;
-  position: relative;
+  background: linear-gradient(
+    190deg,
+    rgba(9, 9, 9),    /* semi-transparent black at top */
+    rgba(119, 115, 115) /* semi-transparent gray at bottom */
+  );
+  color: #fffafa;
+  padding: 70px;
 }
+
 
 .results-overlay {
   text-align: center;
@@ -18,18 +22,17 @@
   font-family: 'Montserrat', sans-serif;
   font-size: 28px;
   font-weight: 600;
-  padding-top: 20px;
-  background-color: rgba(9, 9, 9, 0.1);
-  padding-bottom:50px;
+ 
+  
+  
 }
 
 .overlay-p {
   font-family: 'Open Sans', sans-serif;
   font-size: 15px;
-  margin-bottom: 40px;
   line-height: 1.6;
   padding: 50px 150px;
-  background-color: rgba(9, 9, 9, 0.1);
+  
   
 }
 
@@ -84,6 +87,7 @@
   .overlay-p {
     padding: 10px 60px;
     font-size: 14px;
+    margin: 20px auto;
   }
 
   .results-cards {
@@ -102,10 +106,12 @@
   .result-card .percentage {
     padding: 10px;
     font-size: 30px;
+    
   }
 
   .result-card p {
     font-size: 11px;
+    
   }
 }
 
@@ -127,8 +133,9 @@
   }
 
   .overlay-p {
-    padding: 0 15px;
+    padding: 10px;
     font-size: 13px;
+    margin: 30px auto;
   }
 
   .results-cards {

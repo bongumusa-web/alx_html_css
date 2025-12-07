@@ -215,7 +215,8 @@ header {
         top: 70px;
         flex-direction: column;
         gap: 0;
-       
+        background-color: rgba(128, 128, 128, 0.3); /* 50% transparent gray */
+        padding-bottom: 20px;
 
     }
 

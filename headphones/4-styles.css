@@ -1,0 +1,274 @@
+/* ----------------------
+   WHAT WE DO ICONS
+----------------------- */
+.icon-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px;
+  justify-items: center;
+  margin: 40px 0;
+}
+
+.icon-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.icon-container .icon {
+  font-size: 100px;
+  color: #ff6565;
+  transition: all 0.3s ease;
+}
+
+.icon-container:hover {
+  transform: scale(1.2) rotate(5deg);
+  opacity: 0.9;
+}
+
+.icon-container .icon-name span {
+  font-weight: 600;
+  display: block;
+  margin-top: 10px;
+}
+
+.icon-container .icon-name p {
+  font-size: 13px;
+  color: #fff;
+  margin: 5px 0 0;
+}
+
+/* Continuous subtle bounce */
+@keyframes bounce-icon {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
+
+.icon-container.continuous {
+  animation: bounce-icon 2s infinite;
+}
+
+/* Responsive What we do */
+@media (max-width: 780px) {
+  .icon-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+  }
+}
+
+@media (max-width: 480px) {
+  .icon-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}
+
+/* ----------------------
+   RESULTS SECTION
+----------------------- */
+.results-section {
+  background: linear-gradient(
+      120deg,
+      rgba(9, 9, 9, 0.5),
+      rgba(119, 115, 115, 0.5)
+    ),
+    url("images/Illustration.jpg") center/cover no-repeat;
+  color: #fffafa;
+  padding: 70px 0;
+}
+
+.results-overlay {
+  text-align: center;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.results-section h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 28px;
+  font-weight: 600;
+ 
+}
+
+.overlay-p {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 15px;
+  margin-bottom: 40px;
+  line-height: 1.6;
+  padding: 8px 50px;
+}
+
+.results-cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  justify-items: center;
+  gap: 60px;
+}
+
+/* Pentagon Card */
+.result-card {
+  padding: 10px;
+  width: 150px;
+  height: 140px;
+  background: #ff6565;
+  clip-path: polygon(50% 0, 100% 38%, 82% 100%, 18% 100%, 0 38%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Montserrat', sans-serif;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.result-card:hover {
+  transform: scale(1.1) rotate(5deg);
+  opacity: 0.9;
+}
+
+/* Continuous subtle bounce */
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+
+.result-card.continuous {
+  animation: bounce 2s infinite;
+}
+
+.result-card .percentage {
+  font-size: 30px;
+  font-weight: 600;
+}
+
+.result-card p {
+  margin: 5px 0 0;
+  font-size: 12px;
+  color: #fff;
+}
+
+/* Responsive Results */
+@media (max-width: 780px) {
+  .results-cards {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+  }
+  .result-card {
+    width: 170px;
+    height: 130px;
+  }
+  .result-card .percentage { font-size: 24px; }
+  .result-card p { font-size: 11px; }
+}
+
+@media (max-width: 480px) {
+  .results-cards {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+  .result-card {
+    width: 160px;
+    height: 130px;
+    margin: 0 auto;
+  }
+  .result-card .percentage { font-size: 20px;  font-weight: 600;}
+  .result-card p { font-size: 10px; }
+}
+
+/* ----------------------
+   FOOTER SECTION
+----------------------- */
+.footer-section {
+  background: #111;
+  color: #fff;
+  padding: 40px 20px;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto 20px;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.logo-footer a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #fff;
+  text-decoration: none;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  font-size: 20px;
+}
+
+.logo-footer img {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+}
+
+/* Social Icons */
+.social-icon {
+  display: flex;
+  gap: 15px;
+}
+
+.footer-icon-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  background: #222;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.footer-icon-container .icon {
+  font-size: 16px;
+  color: #fff;
+  transition: all 0.3s ease;
+}
+
+/* Hover Zoom + Color */
+.footer-icon-container:hover {
+  transform: scale(1.3);
+}
+.footer-icon-container:nth-child(1):hover .icon { color: #1877f2; } /* Facebook Blue */
+.footer-icon-container:nth-child(2):hover .icon { color: #1da1f2; } /* Twitter Blue */
+.footer-icon-container:nth-child(3):hover .icon { color: #e1306c; } /* Instagram Pink */
+
+/* Footer paragraph */
+.footer-section p {
+  font-size: 14px;
+  color: #ccc;
+  text-align: center;
+  margin: 0;
+}
+
+/* Responsive Footer */
+@media (max-width: 780px) {
+  .logo-footer a { font-size: 18px; }
+  .footer-icon-container { width: 32px; height: 32px; }
+  .footer-icon-container .icon { font-size: 14px; }
+}
+
+@media (max-width: 480px) {
+  .footer-content {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+  .logo-footer a { font-size: 18px; }
+  .social-icon { order: 2; gap: 12px; }
+  .footer-icon-container { width: 30px; height: 30px; }
+  .footer-icon-container .icon { font-size: 14px; }
+}
