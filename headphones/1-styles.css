@@ -1,0 +1,160 @@
+/* ---------- Font Import ---------- */
+@font-face {
+  font-family: 'holberton_school-icon';
+  src: url('fonts/holberton_school-icon.eot?sq4eq4');
+  src: url('fonts/holberton_school-icon.eot?sq4eq4#iefix') format('embedded-opentype'),
+       url('fonts/holberton_school-icon.ttf?sq4eq4') format('truetype'),
+       url('fonts/holberton_school-icon.woff?sq4eq4') format('woff'),
+       url('fonts/holberton_school-icon.svg?sq4eq4#holberton_school-icon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+/* ---------- Base Icon Class ---------- */
+[class^="holberton_school-icon-"],
+[class*=" holberton_school-icon-"] {
+  font-family: 'holberton_school-icon' !important;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better font rendering */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ---------- Icon Mappings ---------- */
+.holberton_school-icon-arrow_1:before { content: "\e900"; }
+.holberton_school-icon-arrow_2:before { content: "\e901"; }
+.holberton_school-icon-arrow_3:before { content: "\e902"; }
+.holberton_school-icon-arrow_4:before { content: "\e903"; }
+.holberton_school-icon-arrow_5:before { content: "\e904"; }
+.holberton_school-icon-check:before { content: "\e905"; }
+.holberton_school-icon-ic_bag:before { content: "\e906"; }
+.holberton_school-icon-ic_cart:before { content: "\e907"; }
+.holberton_school-icon-ic_facebook:before { content: "\e908"; }
+.holberton_school-icon-ic_hearing:before { content: "\e909"; }
+.holberton_school-icon-ic_instagram:before { content: "\e90a"; }
+.holberton_school-icon-ic_laptop:before { content: "\e90b"; }
+.holberton_school-icon-ic_money:before { content: "\e90c"; }
+.holberton_school-icon-ic_music:before { content: "\e90d"; }
+.holberton_school-icon-ic_sound:before { content: "\e90e"; }
+.holberton_school-icon-ic_twitter:before { content: "\e90f"; }
+.holberton_school-icon-ic_video:before { content: "\e910"; }
+.holberton_school-icon-menu:before { content: "\e911"; }
+.holberton_school-icon-search_1:before { content: "\e912"; }
+.holberton_school-icon-search_2:before { content: "\e913"; }
+.holberton_school-icon-star:before { content: "\e914"; }
+
+
+ h1, h2, h3, .button {
+  font-family: 'Montserrat', sans-serif;
+}
+
+p, li, small {
+  font-family: 'Open Sans', sans-serif;
+}
+
+
+.icon-grid {
+    padding: 20px 200px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 columns by default */
+    gap: 10px;
+    text-align: center;
+}
+
+.icon-container {
+    padding: 20px;
+}
+
+.icon {
+    font-size: 80px;
+    color: #ff6565;
+}
+
+.icon-name {
+    font-family: Arial, sans-serif;
+    padding: 10px;
+}
+
+.icon-name span {
+    font-weight: bold;
+}
+
+.icon-name p {
+    padding: 10px;
+}
+
+
+.what-we-do{
+    text-align: center;
+    padding: 40px 50px;
+    
+}
+
+.what-we-do h2{
+    padding: 20px;
+    font-size: 1.8rem;
+}
+
+.what-we-do p{
+    width: 600px;
+    margin: 10px auto;
+    text-align: center;
+
+}
+
+/* --------- Tablets (≤780px) --------- */
+@media screen and (max-width: 780px) {
+    .icon-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns on tablets */
+        padding: 20px 50px; /* reduce horizontal padding */
+    }
+
+    .icon {
+        font-size: 100px; /* slightly smaller icons */
+    }
+
+    .what-we-do{
+    text-align: center;
+    padding: 30px 20px;
+    
+}
+
+.what-we-do h2{
+    padding: 30px;
+    font-size: 1.5rem;
+}
+
+.what-we-do p{
+    padding: 30px 50px;
+    text-align: center;
+
+}
+}
+
+/* --------- Mobile (≤480px) --------- */
+@media screen and (max-width: 480px) {
+    .icon-grid {
+        grid-template-columns: 1fr; /* 1 column on mobile */
+        padding: 20px 20px; /* minimal padding */
+    }
+
+    .icon {
+        font-size: 100px; /* smaller icons for mobile */
+    }
+    .icon-name p {
+    padding: 10px 50px;
+     }
+    .what-we-do p{
+    width: 100%;
+    margin: 20px auto;
+    padding: 8px;
+    
+    }
+
+}
